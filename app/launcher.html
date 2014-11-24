@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<title>Launcher</title>
+		  <link rel="stylesheet" href="style.css">
+			<script>
+				 /*  
+                    
+                    Place the URL for your Wordpress install here
+					If you want to try it out first you can on our AdamApps website
+					(Please note demo user has author privileges only so will be blocked from using some functions)
+
+						user: demo
+						pass: 123456
+
+				 */
+				var yourip = 'http://adamapps.org'
+			</script>
+	</head>
+	<body>	
+		<div id="wrapper">
+			<!-- Row 1 -->
+				<div class="row"> 
+					<div class="small-3 columns">
+						<a onClick="button1();">
+							<img src="http://placehold.it/300x240&text=Dash" />
+						</a>
+					</div>
+					<div class="small-3 columns">
+						<a onClick="button2();">
+							<img src="http://placehold.it/300x240&text=Posts" />
+						</a>
+					</div>
+					<div class="small-3 columns">
+						<a onClick="button3();">
+							<img src="http://placehold.it/300x240&text=Pages" />
+						</a>
+					</div>
+					<div class="small-3 columns">
+						<a onClick="button4();">
+							<img src="http://placehold.it/300x240&text=Files" />
+						</a>
+					</div>
+				</div>
+				
+			<!-- Row 2 -->
+				<div class="row">
+					<div class="small-3 columns">
+						<a onClick="button5();">
+							<img src="http://placehold.it/300x240&text=Upload" />
+						</a>
+					</div>
+					<div class="small-3 columns">
+						<a onClick="button6();">
+							<img src="http://placehold.it/300x240&text=Plugins" />
+						</a>
+					</div>
+					<div class="small-3 columns">
+						<a onClick="button7();">
+							<img src="http://placehold.it/300x240&text=Users" />
+						</a>
+					</div>
+					<div class="small-3 columns">
+						<a onClick="button8();">
+							<img src="http://placehold.it/300x240&text=Settings" />
+						</a>
+					</div>					
+				</div>
+			
+			<!-- Row 3 -->
+				<div class="row">
+					<div class="small-3 columns">
+						<a onClick="button9();">
+							<img src="http://placehold.it/300x240&text=Themes" />
+						</a>
+					</div>
+					<div class="small-3 columns">
+						<a onClick="button10();">
+							<img src="http://placehold.it/300x240&text=Widgets" />
+						</a>
+					</div>
+					<div class="small-3 columns">
+						<a onClick="button11();">
+							<img src="http://placehold.it/300x240&text=Menus" />
+						</a>
+					</div>
+					<div class="small-3 columns">
+						<a href="#" data-reveal-id="myModal">
+							<img src="http://placehold.it/300x240&text=Modal" />
+						</a>
+					</div>
+				</div>
+			</div>
+		
+		<!-- Jquery (used for shortcuts.js)-->	
+	 	<script src="js/libs/jquery.js"></script>
+
+		<!--  aDOM API -->
+		<script src="js/shortcuts.js"></script>
+		<script src="js/location.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/launcher.js"></script>
+				
+		<!--  Adds Foundation JS -->
+		  <script>
+			  document.write('<script src=' +	  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +  '.js><\/script>')
+		  </script>
+		  
+		  <script src="js/libs/foundation.js"></script>
+
+		<!-- Example Foundation Modal -->
+		<div id="myModal" class="reveal-modal">
+			  <h2>Example Foundation Modal</h2>
+			 	 <p class="lead">This is an Example Foundation Modal</p>
+			 		 <p>Foundation is an amazing responsive library that helps create UI's for html applications (ala Twitter Bootstrap). If you want to learn about using foundation then check out the documentation for Foundation 4 (the library aDOM comes embedded with) <a onClick="getFoundationDocs();">here</a></p>
+			 			  <a class="close-reveal-modal">&#215;</a>
+				
+				<!-- Script that uses the Node-Webkit Shell API to open Foundation Docs in default native browser -->
+				  <script>
+					function getFoundationDocs(){
+						gui.Shell.openExternal('http://foundation.zurb.com/docs/v/4.3.2/');
+					}
+				</script>
+		</div>
+		  
+		  <script>
+		    $(document).foundation();
+ 		 </script>
+
+	</body>
+</html>
+
+

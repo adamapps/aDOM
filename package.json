@@ -1,0 +1,11 @@
+{
+  "name": "aDOM",
+  "main": "app/runtime.html",
+  "window": {
+    "icon": "icon.png",
+	"width": 700,
+	"height": 440,
+	"toolbar": false,
+	"always-on-top": false
+  }
+}
