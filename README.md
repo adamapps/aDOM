@@ -29,6 +29,7 @@ There's not much to see here because this file isn't actually seen, it simply la
 &nbsp;
 <h2>runtime.js</h2>
 The runtime.js file controls the runtime behavior for aDOM. The CSS comments walk you through what happens but I'll still recap here. Once aDOM is started he goes inside the main app folder and grabs the runtime.html file. The runtime.html file references the runtime.js file and the following code is fired. First, runtime.js requires the Node-Webkit UI library, grabs the current window and defines the tray variable. Next the file sets up the minimize event that will handle clicks to the tray icon and adds the applications icon to the systems tray.  The next function adds a click event to the tray icon that is a simple JS window.open event that opens the application launcher and adds a few sizing parameters. This function doesn't actually run the first time aDOM is started but rather opens the launcher with every subsequent click to the systems tray icon after initial launch. Next the window is actually minimized and on the first launch calls an identical window.open event on the launcher.html file to open the application launcher. Again this function is only called once in the entire aDOM life cycle as the application will remain running until you close all windows from the launchers native menu (we'll see that in a sec).
+```javascript
 <pre class="lang:default decode:true" title="Runtime.js File">// Require Node-Webkit
  var gui = require('nw.gui');
 
@@ -62,6 +63,7 @@ The runtime.js file controls the runtime behavior for aDOM. The CSS comments wal
      window.open('launcher.html', '_blank', 'screenX=500,screenY=200,width=700,height=460');
 
 </pre>
+```
 here's a screenshot of the systems tray icon on Lubuntu 12.04, it's the circular AdamApps logo in case you're reading this without viewing the icon.png file first
 
 <a href="http://customizedclouds.com/wp-content/uploads/2014/11/aDOM-runtime-icon-screenshot.png"><img class="alignnone size-full wp-image-12321" src="http://customizedclouds.com/wp-content/uploads/2014/11/aDOM-runtime-icon-screenshot.png" alt="aDOM-runtime-icon-screenshot" width="504" height="93" /></a>
