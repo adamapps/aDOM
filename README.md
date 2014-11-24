@@ -360,3 +360,6 @@ $(document).keydown(function(evt){
 
 //Add subsequent commands here or delete the above commands and add your own...</pre>
 &nbsp;
+<h2>timer.js</h2>
+(not referenced in launcher.html)
+I've also included a really small jQuery library that handles timer events very conveniently, it isn't really needed in the default launcher application but if you want to see it in action then open up timer.js and there is examples on how to use it in the comments head, plus the methods that are available to the library as well.
