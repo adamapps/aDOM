@@ -272,6 +272,8 @@ function button12(){
 and here's a screenshot of the launcher on Lubuntu 12.04
 
 <a href="http://customizedclouds.com/wp-content/uploads/2014/11/screenshot-aDOM-application-launcher.jpg"><img class="alignnone size-full wp-image-12320" src="http://customizedclouds.com/wp-content/uploads/2014/11/screenshot-aDOM-application-launcher.jpg" alt="screenshot-aDOM-application-launcher" width="1047" height="500" /></a>
+and here's a shot of the foundation modal that is inculded
+<a href="http://customizedclouds.com/wp-content/uploads/2014/11/foundation-screenshot.jpg"><img class="alignnone size-full wp-image-12320" src="http://customizedclouds.com/wp-content/uploads/2014/11/foundation-screenshot.jpg" alt="screenshot-aDOM-application-launcher" width="1047" height="500" /></a>
 <h2>location.js</h2>
 location.js saves the windowing position for aDOM and does this by using the HTML5 localStorage api. It's a bit extensive so I won't list the code here but if you want to see the initial tutorial I got it from <a title="Save Window State Inside Node-Webkit" href="https://github.com/rogerwang/node-webkit/wiki/Preserve-window-state-between-sessions" target="_blank">click here</a>. Basically what this file does is allows you to drag the application launcher anywhere on the screen (or actually resize the window, etc.), close the app out and the launcher will start back at it's last closed position on the screen. Personally I think this is one of the best use cases for using the localStorage api i've seen outside of how it's mostly used, for like saving form state and stuff.
 <h2>menu.js</h2>
